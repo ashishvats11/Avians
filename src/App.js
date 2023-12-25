@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Category from './Components/Category';
 import Testimonials from './Components/Testimonial';
+import Subscribe from './Components/Subscribe';
 
 export {Header}; // Named Export
 function App() {
@@ -16,6 +17,7 @@ function App() {
   <Catalogue name="Ashish"/>
   <Category/>
   <Testimonials/>
+  <Subscribe/>
   <Footer/>
  
   </div>
