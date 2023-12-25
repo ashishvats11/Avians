@@ -8,7 +8,7 @@ function Nav(){
                 <li className="text-white cursor-pointer hover:underline hover:underline-offset-2 hover: decoration-orange-500  px-8">Home</li>
                 <li className="text-white cursor-pointer hover:underline hover:underline-offset-2 hover: decoration-orange-500  px-8">About</li>
                 <li className="text-white cursor-pointer hover:underline hover:underline-offset-2 hover: decoration-orange-500  px-8">Blog</li>
-                <li className="text-white cursor-pointer hover:underline hover:underline-offset-2 hover: decoration-orange-500  px-8">Services</li>
+                <li className="text-white cursor-pointer hover:underline hover:underline-offset-2 hover: decoration-orange-500  px-8" >Services</li>
             </ul>
             <button className='text-white cursor-pointer mr-10 hover:underline hover:underline-offset-2 hover:decoration-orange-500'>Login</button>
          

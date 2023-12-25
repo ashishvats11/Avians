@@ -22,11 +22,11 @@ function Toggle(){
   )
 }
 function App() {
-  const [activeCategory, setActiveCategory] = useState('men');
+  // const [activeCategory, setActiveCategory] = useState('men');
 
-  const handleCategoryChange = (category) => {
-    setActiveCategory(category);
-  };
+  // const handleCategoryChange = (category) => {
+  //   setActiveCategory(category);
+  // };
 
   return (
     <div>
@@ -39,8 +39,9 @@ function App() {
           path=""
           element={
             <CategoryMen
-              active={activeCategory === 'men'}
-              onCategoryChange={handleCategoryChange}
+              // active={activeCategory === 'men'}
+              // onCategoryChange={handleCategoryChange}
+              
             />
           }
         />
@@ -48,12 +49,13 @@ function App() {
           path="/women"
           element={
             <CategoryWomen
-              active={activeCategory === 'women'}
-              onCategoryChange={handleCategoryChange}
+              // active={activeCategory === 'women'}
+              // onCategoryChange={handleCategoryChange}
+              
             />
           }
         />
-        <Route path="*" element={<Navigate to="/men" />} />
+        {/* <Route path="*" element={<Navigate to="/men" />} /> */}
       </Routes>
 
       <Testimonials />
