@@ -7,7 +7,7 @@ export default function Header(){
     const [isActive, setIsActive] = useState(false);
     return(
         <div>
-            <h1 className="h-auto text-white font-mono text-4xl font-bold text-center py-2 bg-teal-800 ">Avians</h1>
+            <h1 className="h-auto text-white text-5xl  text-center py-2 bg-teal-800 font-cinzel tracking-wide ">AVIANS</h1>
             <div>
                 <div onClick={()=>{setIsActive(!isActive)}} className="button">
                     <div className={`burger ${isActive ? "burgerActive":""}`}></div>

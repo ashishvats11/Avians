@@ -2,8 +2,10 @@ import { useState } from "react";
 import { validateEmail } from "../utils.js/validemail";
 
 function PasswordErrorMessage(){
-    return <p className="text-red-500 text-xs">Password should have at least 8 characters</p>;
-}
+    return (
+    <p className="text-red-500 text-xs">Password should have at least 8 characters</p>
+    );
+};
 export default function Signup(){
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -21,9 +23,10 @@ export default function Signup(){
       }
 
     const submitHandler =(e)=>{
-        email.preventDefault();
+        e.preventDefault();
         console.log('Account Created!');
         clearForm();
+        alert(`Welcome ${firstName}`)
     }
     
     const isFormValid = ()=>{
@@ -57,8 +60,8 @@ export default function Signup(){
 
                 <div className=" flex flex-col">
                     <label>Password: <sup className="text-red-500 font-bold text-sm">*</sup></label>
-                    <input type="password" value={password.value} placeholder="Set Password"  onBlur={(e=>{setPassword({...password,isTouched:true })})} className="rounded-lg p-1" style={{border:'1px solid gray'}}/>
-                    {password.value.length && password.isTouched===true ?PasswordErrorMessage() :""}
+                    <input type="password" value={password.value} placeholder="Set Password"  onChange ={(e)=>{setPassword({...password,value:e.target.value})}} onBlur={(e=>{setPassword({...password,isTouched:true })})} className="rounded-lg p-1" style={{border:'1px solid gray'}}/>
+                    {password.value.length <8 && password.isTouched===true ?PasswordErrorMessage() :""}
                 </div>
 
                 <div className=" flex flex-col">
@@ -71,7 +74,7 @@ export default function Signup(){
                         
                 </div>
                 <div className="flex justify-center">
-                    <button className={`bg-violet-950 text-white rounded-3xl p-3 ${!isFormValid() ? 'bg-gray-500 text-gray-200 cursor-not-allowed' : ''}`} disabled={!isFormValid()} >Create Account</button>
+                    <button className={` text-white rounded-3xl p-3 ${!isFormValid() ? 'bg-slate-500 text-gray-200 cursor-not-allowed' : 'bg-violet-950'}`} disabled={!isFormValid()} >Create Account</button>
                 </div>
 
             </form>

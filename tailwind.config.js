@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily:{
         pacifico:['Pacifico', "cursive"],
+        cinzel:['Cinzel', 'serif']
       }
     },
   },
