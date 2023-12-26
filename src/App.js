@@ -8,6 +8,7 @@ import CategoryMen from './Components/CategoryMen';
 import Testimonials from './Components/Testimonial';
 import Subscribe from './Components/Subscribe';
 import CategoryWomen from './Components/CategoryWomen';
+import Signup from './Components/Signup';
 
 function Toggle(){
   return(
@@ -32,30 +33,25 @@ function App() {
     <div>
       <Header />
       <Nav />
+      
       <Catalogue name="Ashish" />
       <Toggle/>
       <Routes>
+      <Route path='/signup' element={<Signup/>}/>
         <Route
           path=""
           element={
-            <CategoryMen
-              // active={activeCategory === 'men'}
-              // onCategoryChange={handleCategoryChange}
-              
-            />
+            <CategoryMen/>
           }
         />
         <Route
           path="/women"
           element={
-            <CategoryWomen
-              // active={activeCategory === 'women'}
-              // onCategoryChange={handleCategoryChange}
-              
-            />
+            <CategoryWomen/>
           }
         />
-        {/* <Route path="*" element={<Navigate to="/men" />} /> */}
+       
+
       </Routes>
 
       <Testimonials />
