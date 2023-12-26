@@ -1,5 +1,6 @@
-import {Routes,Route,Link} from 'react-router-dom';
+import {Routes,Route} from 'react-router-dom';
 import Footer from './Footer';
+import {HashLink as Link} from 'react-router-hash-link'
 
 function Nav(){
     return(
@@ -10,7 +11,7 @@ function Nav(){
                 <li className="text-white cursor-pointer hover:underline hover:underline-offset-2 hover: decoration-orange-500  px-8">Blog</li>
                 <li className="text-white cursor-pointer hover:underline hover:underline-offset-2 hover: decoration-orange-500  px-8" >Services</li>
             </ul>
-            <button className='text-white cursor-pointer mr-10 hover:underline hover:underline-offset-2 hover:decoration-orange-500'>Login</button>
+            <button className='text-white cursor-pointer mr-10 hover:underline hover:underline-offset-2 hover:decoration-orange-500'><Link to='/signup'>Login</Link></button>
          
         </div>
     );
