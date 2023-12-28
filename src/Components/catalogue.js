@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
-
+import Tilt from 'react-parallax-tilt'
 
 
 function Catalogue(props) {
@@ -35,10 +35,14 @@ function Catalogue(props) {
               <button className='text-white bg-black bg-opacity-60 rounded-2xl px-4 py-2'>Get Started! </button>
             </div>
           </div>
+        
           <div className="flex justify-center md:w-1/2">
+            <Tilt >
             <img src={'./brand_logo.jpeg'} alt="The Avians Clothing" className="h-56 w-56 object-contain md:h-80 md:w-80 rounded-full hover:scale-110 transition transform  duration-700"
             />
+            </Tilt>
           </div>
+        
         </div>
       
     </div>
