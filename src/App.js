@@ -9,6 +9,7 @@ import Testimonials from './Components/Testimonial';
 import Subscribe from './Components/Subscribe';
 import CategoryWomen from './Components/CategoryWomen';
 import Signup from './Components/Signup';
+import Home from './Components/Home';
 
 function Toggle(){
   return(
@@ -23,33 +24,24 @@ function Toggle(){
   )
 }
 function App() {
-  // const [activeCategory, setActiveCategory] = useState('men');
+    const [showLoginForm, setShowLoginForm] = useState(false);
 
-  // const handleCategoryChange = (category) => {
-  //   setActiveCategory(category);
-  // };
+    const handleLoginClick = () => {
+      setShowLoginForm(true);
+    };
+
 
   return (
     <div>
       <Header />
-      <Nav />
+      <Nav onLoginClick={handleLoginClick} />
       
       <Catalogue name="Ashish" />
       <Toggle/>
-      <Routes>
-      <Route path='/signup' element={<Signup/>}/>
-        <Route
-          path=""
-          element={
-            <CategoryMen/>
-          }
-        />
-        <Route
-          path="/women"
-          element={
-            <CategoryWomen/>
-          }
-        />
+        <Routes>
+      {/* <Route path='/signup' element={<Signup/>}/> */}
+        <Route path="" element={ <CategoryMen/>}/>
+        <Route path="/women" element={<CategoryWomen/>}/>
        
 
       </Routes>
@@ -57,6 +49,10 @@ function App() {
       <Testimonials />
       <Subscribe />
       <Footer />
+      {/* <Home/> */}
+      
+        {/* <Route path='/signup' element={<Signup/>}/> */}
+        {showLoginForm && <Signup onClose={() => setShowLoginForm(false)} />}
     </div>
   );
 }

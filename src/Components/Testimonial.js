@@ -39,8 +39,7 @@ export default function Testimonials(){
                                     disableOnInteraction: false,
                                     
                                 }}
-        
-
+                                
                 >
                     {data.map(user => (
                         <SwiperSlide key={user.id}>

@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt'
 
 function Catalogue(props) {
   return (
-    <div className="bg-teal-700 md:max-h-screen ">
+    <div className="bg-teal-700 md:max-h-screen py-16 ">
       
        
         <div className="flex flex-col md:flex-row space-x-7 items-center py-8 px-3 md:px-20">
@@ -15,12 +15,12 @@ function Catalogue(props) {
                 Hello,{props.name}
               </p>
               
-              <p className="text-white font-mono text-2xl text-center md:text-left">
+              <p className="text-white font-mono text-3xl text-center md:text-left">
                 Avians - Where Style Takes Flight!
               </p>
             </div>
             <div>
-                <p className="text-white text-justify mt-4 text-lg">
+                <p className="text-white text-justify mt-4 text-xl">
                     Avians is a premier clothing brand that soars above the rest. Our
                     designs embrace the grace and freedom of avian creatures,
                     translating them into timeless fashion statements. With each
